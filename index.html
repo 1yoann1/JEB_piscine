@@ -15,33 +15,34 @@
   </style>
 </head>
 <body>
-    <div id="loginBox">
-        <h1>LOGIN PAGE</h1>
-        <form id="loginForm" onsubmit="return validateLogin();">
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Se connecter</button>
-        </form>
-    </div>
-    <script>
-      function validateLogin() {
-        const nom = document.getElementById("nom").value.trim();
-        const email = document.getElementById("email").value.trim();
+  <h1 id="pageTitle">JEB PROJECT</h1>
+  <div id="loginBox">
+    <h1>LOGIN PAGE</h1>
+    <form id="loginForm" onsubmit="return validateLogin();">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">Se connecter</button>
+    </form>
+  </div>
+  <script>
+  function validateLogin() {
+    const nom = document.getElementById("nom").value.trim();
+    const email = document.getElementById("email").value.trim();
 
-        if (nom === "") {
-          alert("Veuillez entrez votre nom.");
-          return false;
-        }
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if(!emailRegex.test(email)) {
-          alert("Veuillez entrez une adresse email valide.");
-          return false;
-        }
-        alert("Connexion réussie!");
-        return true;
-      }
-    </script>
+    if (nom === "") {
+      alert("Veuillez entrez votre nom.");
+      return false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailRegex.test(email)) {
+      alert("Veuillez entrez une adresse email valide.");
+      return false;
+    }
+    alert("Connexion réussie!");
+    return true;
+  }
+  </script>
 </body>
 </html>
