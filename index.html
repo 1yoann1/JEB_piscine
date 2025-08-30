@@ -35,8 +35,10 @@
       alert("Veuillez entrez votre nom.");
       return false;
     }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!emailRegex.test(email)) {
+    const emailNormRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailJebRegex = /^[^\s@]+@jeb\.[^\s@]+$/;
+    const emaStartupRegex = /^[^\s@]+@start\.[^\s@]+$/
+    if(!emailNormRegex.test(email) && !emaStartupRegex.test(email) && !emailJebRegex.test(email)) {
       alert("Veuillez entrez une adresse email valide.");
       return false;
     }
