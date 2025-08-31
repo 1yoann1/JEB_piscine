@@ -34,6 +34,9 @@ export default function Login() {
                     <label htmlFor="password">Mot de passe :</label>
                     <input type="password" id="pass" value={password} onChange={(e) => setPassword(e.target.value)} required/>
                     <button type="submit">Se connecter</button>
+                    <p>
+                        Pas encore de compte ? <a href="/register">Créer un compte ici.</a>
+                    </p>
                 </form>
             </div>
         </div>
